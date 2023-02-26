@@ -14,6 +14,7 @@ const SignUp = () => {
     const email = form.email.value;
     const password = form.password.value;
     console.log(name, email, password);
+    form.reset();
 
     createUser(email, password)
       .then((result) => {
@@ -60,7 +61,7 @@ const SignUp = () => {
                 <span className="label-text">Password</span>
               </label>
               <input
-                type="text"
+                type="password"
                 placeholder="password"
                 name="password"
                 className="input input-bordered"
